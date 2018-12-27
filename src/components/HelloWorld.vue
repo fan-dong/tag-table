@@ -1,11 +1,7 @@
 <template>
     <div class="hello">
-        <div class="top">
-            <div class="tagBox">
-                <el-tag :key="tag" v-for="tag in tagList" style="margin:10px;" closable @close="handleClose(tag)">
-                    {{tag}}
-                </el-tag>
-            </div>
+        <div class="tagBox">
+            <el-tag :key="tag" v-for="tag in tagList" style="margin:10px;" closable @close="handleClose(tag)">{{tag}}</el-tag>
         </div>
     
         <el-button type="primary" style="margin:50px 0 10px" size="mini" @click="done()">确定</el-button>
@@ -14,7 +10,6 @@
             <el-table-column prop="title" label="字段"></el-table-column>
             <el-table-column prop="id" label="ID"></el-table-column>
         </el-table>
-    
     </div>
 </template>
 
@@ -48,11 +43,7 @@
             //删除tag
             handleClose(tag) {
                 this.indexTag = tag
-
                 this.tagList.splice(this.tagList.indexOf(tag), 1);
-                this.multipleSelection = []
-
-
                 this.tableList.forEach((el,i)=>{
                     if(el.title == this.indexTag){
                         this.$refs.multipleTable.toggleRowSelection(this.tableList[i]);
@@ -78,14 +69,10 @@
 .hello
     width 500px
     margin 50px auto
-    .top
-        height 100px;
-        overflow hidden
-        .tagBox
-            width 100%
-            height 100px
-            border 1px solid #ddd
-            float left
+    .tagBox
+        width 100%
+        height 100px
+        border 1px solid #ddd
     
 </style>
 
