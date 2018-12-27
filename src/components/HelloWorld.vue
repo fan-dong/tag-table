@@ -9,7 +9,7 @@
         </div>
     
         <el-button type="primary" style="margin:50px 0 10px" size="mini" @click="done()">确定</el-button>
-        <el-table border :data="tableList" ref="multipleTable" style="width: 50%" @selection-change="handleSelectionChange">
+        <el-table border :data="tableList" ref="multipleTable" style="width: 100%" @selection-change="handleSelectionChange">
             <el-table-column type="selection" width="55"></el-table-column>
             <el-table-column prop="title" label="字段"></el-table-column>
             <el-table-column prop="id" label="ID"></el-table-column>
@@ -76,13 +76,13 @@
 
 <style lang="stylus" scoped>
 .hello
-    width 800px
+    width 500px
     margin 50px auto
     .top
         height 100px;
         overflow hidden
         .tagBox
-            width 70%
+            width 100%
             height 100px
             border 1px solid #ddd
             float left
