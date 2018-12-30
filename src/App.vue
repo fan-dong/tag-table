@@ -20,6 +20,6 @@ body,
 	padding 0
 	box-sizing border-box
 	font-size 14px
-	color #fff
+	color #5f5f5f
 	font-family 'Avenir', Helvetica, Arial, sans-serif
 </style>

@@ -9,4 +9,3 @@
 ```
 ## 示例图
 ![示意图](./static/img/pic.png)
-![示意图](./static/img/pic2.png)
